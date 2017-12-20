@@ -727,7 +727,7 @@ begin
       Continue;
     end;
 
-    SetSocketDelayOption(FSocket, FUseNagel);
+    SetSocketDelayOption(NewSocket, FUseNagel);
     SetSocketLingerOption(NewSocket, 0);
 
     if Assigned(FOnAccepted) then FOnAccepted(NewSocket, String(AnsiStrings.StrPas(inet_ntoa(sockaddr_in(Addr).sin_addr))));
